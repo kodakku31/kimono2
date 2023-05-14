@@ -1,0 +1,545 @@
+@charset "UTF-8";
+
+/* Google Fonts EB Garamond */
+@import url('https://fonts.googleapis.com/css2?family=EB+Garamond:wght@400;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Shippori+Mincho:wght@400;600&display=swap');
+
+
+html {
+  font-size: 100%;
+}
+
+body {
+  color: #000;
+  font-family: 'Yu Mincho Light', 'YuMincho', 'Yu Mincho', '游明朝体', serif;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.75;
+  -webkit-text-size-adjust: 100%;
+  text-size-adjust: 100%;
+  letter-spacing: 0.025rem;
+  margin: 0;
+}
+
+a {
+  color: #000;
+  text-decoration: none;
+}
+
+img {
+  max-width: 100%;
+  vertical-align: bottom;
+}
+
+li {
+  list-style: none;
+}
+
+iframe {
+  vertical-align: bottom;
+}
+
+/* モジュール */
+.font_kosakigake {
+  font-family: 'しっぽり明朝', serif;
+  font-weight: normal;
+}
+
+.font_garamond {
+  font-family: 'EB Garamond', serif;
+  font-weight: 400;
+  opacity: 0.7;
+  font-size: 0.85rem;
+}
+.wrapper {
+  width: 100%;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+.fixed-bg {
+  height: 300px;
+  background-attachment: fixed;
+  background-size: cover;
+  background-position: center;
+}
+
+/* header */
+#header {
+  width:100%;
+  padding:20px 40px;
+  display: flex;
+  justify-content: space-between;
+  position: fixed;
+  top:0;
+  left: 0;
+  z-index: 10;
+}
+#header .site-titel {
+  width: 100px;
+  line-height: 1px;
+}
+#header .site-titel a {
+  display: block;
+}
+/* ヘッダーナビ */
+#header-navi {
+  position: absolute;
+  top: 0;
+  left: -500px;
+  opacity: 0;
+  animation: 0.5s;
+}
+
+/*
+ハンバーガ―メニュー
+*/
+.hamburger {
+  width: 100px;
+  height: 100px;
+  position: fixed;
+  top: 0;
+  right: 0;
+  z-index: 30;
+  cursor: pointer;
+  transition: 0.3s;
+}
+.hamburger:hover {
+  opacity: 0.7;
+}
+/* ハンバーガーメニューの線の設定（メニューが閉じている時） */
+.hamburger span {
+  width: 50px;
+  height: 2px ;
+  background: #000;
+  position: absolute;
+  left: 25px;
+  transition: 0.3s ease-in-out;
+}
+/* 1本目の線の位置を設定 */
+.hamburger span:nth-child(1) {
+  top: 36px;
+}
+/* 2本目の線の位置を設定 */
+.hamburger span:nth-child(2) {
+  top: 50px;
+}
+/* 3本目の線の位置を設定 */
+.hamburger span:nth-child(3) {
+  top: 64px;
+}
+/*
+ハンバーガーメニューの線の設定（メニューが開いている時）
+1本目の線を-45度回転
+*/
+.hamburger.active span:nth-child(1) {
+  top: 47px;
+  left: 25px;
+  background :#fff;
+  transform: rotate(-45deg);
+}
+/* 2本目と3本目は重ねて45度回転 */
+.hamburger.active span:nth-child(2),
+.hamburger.active span:nth-child(3) {
+  top: 47px;
+  background: #fff;
+  transform: rotate(45deg);
+}
+/*
+メニューの設定
+最初は閉じている状態なので、「opacity: 0;」「visibility: hidden;」
+で要素を非表示にしておく
+*/
+#navi {
+  width: 100%;
+  height: 100vh;
+  background-color: #252526;
+  color: #fff;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 20;
+  opacity: 0;
+  text-align: center;
+  transition: opacity 0.6s ease, visibility 0.6s ease;
+  visibility: hidden;
+}
+/*
+ハンバーガーメニューがクリックされた際に、jQueryで#naviにactiveクラスを追加して、
+メニューを表示させる。
+*/
+#navi.active {
+  opacity: 1;
+  visibility: visible;
+}
+#navi .wrapper {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  padding: 0 100px;
+  transform: translateY(-50%) translateX(-50%);
+  -webkit-transform: translateY(-50%) translateX(-50%);
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row-reverse;
+}
+#navi .menu-right {
+  display: flex;
+  justify-content: space-between;
+  width: 70%;
+}
+#navi .menu-right li {
+  margin-bottom: 20px;
+  writing-mode: vertical-rl;
+ -webkit-writing-mode: vertical-rl;
+ -moz-writing-mode: vertical-rl;
+ -ms-writing-mode: tb-rl;
+}
+#navi .menu-right a {
+  color: #fff;
+  font-weight: bold;
+}
+
+#navi .menu-left {
+  width: 30%;
+  padding-right: 100px;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row-reverse;
+}
+#navi .sns {
+  writing-mode: vertical-rl;
+ -webkit-writing-mode: vertical-rl;
+ -moz-writing-mode: vertical-rl;
+ -ms-writing-mode: tb-rl;
+}
+#navi .sns a {
+  color: #fff;
+}
+#navi .copyright {
+  writing-mode: vertical-rl;
+ -webkit-writing-mode: vertical-rl;
+ -moz-writing-mode: vertical-rl;
+ -ms-writing-mode: tb-rl;
+}
+
+
+/* mainvisual */
+#mainvisual {
+  margin-bottom: 100px;
+}
+#mainvisual .video {
+  width: 100%;
+}
+/* point */
+#point {
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: space-between;
+  margin-bottom: 100px;
+}
+#point .sec-title {
+  width: 45%;
+  writing-mode: vertical-rl;
+ -webkit-writing-mode: vertical-rl;
+ -moz-writing-mode: vertical-rl;
+ -ms-writing-mode: tb-rl;
+ margin-left: 100px;
+}
+#point .sec-title .ja {
+  display: block;
+  font-size: 2rem;
+  margin-left: 70px;
+}
+#point .sec-title .en {
+  display: block;
+}
+
+#point .textbox {
+  width: 55%;
+  writing-mode: vertical-rl;
+ -webkit-writing-mode: vertical-rl;
+ -moz-writing-mode: vertical-rl;
+ -ms-writing-mode: tb-rl;
+}
+#point .textbox p {
+  margin-left: 50px;
+}
+#point .textbox p:last-child {
+  margin-left: 0;
+}
+
+/* img1-bg */
+#img1-bg {
+  background-image: url(../img/bg1.jpg);
+  margin-bottom: 100px;
+}
+/* img2-bg */
+#img2-bg {
+  background-image: url(../img/bg2.jpg);
+  margin-bottom: 100px;
+}
+
+/* feature */
+#feature {
+  margin: 0 20px 100px 20px;
+
+}
+/* feature共通 */
+#feature .item {
+  display: flex;
+  margin-bottom: 100px;
+}
+#feature .item .img {
+  width: 40%;
+}
+#feature .item .img img {
+  width: 100%
+}
+#feature .item .text {
+  width: 60%;
+  display: flex;
+  flex-direction: row-reverse;
+}
+#feature .title {
+  writing-mode: vertical-rl;
+  -webkit-writing-mode: vertical-rl;
+  -moz-writing-mode: vertical-rl;
+  -ms-writing-mode: tb-rl;
+}
+#feature .title .ja {
+  display: inline-block;
+  margin-bottom: 30px;
+}
+#feature .title .en {
+  display: inline-block;
+}
+#feature .textbox {
+  writing-mode: vertical-rl;
+  -webkit-writing-mode: vertical-rl;
+  -moz-writing-mode: vertical-rl;
+  -ms-writing-mode: tb-rl;
+  font-size: 0.85rem;
+}
+#feature .textbox p {
+  margin-left: 30px;
+}
+
+
+/* 右 */
+#feature .right-item .text {
+  padding: 70px 100px 0 0;
+}
+#feature .right-item .textbox {
+  padding: 70px 20px 0 0;
+}
+/* 左 */
+#feature .left-item .text{
+  flex-direction: row;
+}
+#feature .left-item .text {
+  padding: 70px 0px 0 100px;
+}
+#feature .left-item .textbox {
+  padding: 70px 0 0 20px;
+}
+
+/* blog */
+#blog {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 100px;
+}
+#blog .sec-title {
+  writing-mode: vertical-rl;
+  -webkit-writing-mode: vertical-rl;
+  -moz-writing-mode: vertical-rl;
+  -ms-writing-mode: tb-rl;
+  font-size: 1.5rem;
+}
+#blog .sec-title .ja {
+  display: block;
+}
+#blog .sec-title .en {
+  display: block;
+  opacity: 0.5;
+  font-size: 0.85rem;
+}
+#blog .list {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  margin-top: 0;
+}
+#blog .list li {
+  width : 30%;
+}
+#blog .list .img {
+  width: 100%;
+}
+#blog .list .img img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+#blog .list li:nth-child(-n+3) {
+  margin-bottom: 50px;
+}
+
+/* footer */
+#footer {
+  padding: 50px 20px;
+  background-color: #333;
+  color: #fff;
+}
+#footer .container {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row-reverse;
+
+}
+#footer .title {
+  writing-mode: vertical-rl;
+  -webkit-writing-mode: vertical-rl;
+  -moz-writing-mode: vertical-rl;
+  -ms-writing-mode: tb-rl;
+}
+#footer .sns {
+  writing-mode: vertical-rl;
+  -webkit-writing-mode: vertical-rl;
+  -moz-writing-mode: vertical-rl;
+  -ms-writing-mode: tb-rl;
+}
+#footer .copyright {
+  writing-mode: vertical-rl;
+  -webkit-writing-mode: vertical-rl;
+  -moz-writing-mode: vertical-rl;
+  -ms-writing-mode: tb-rl;
+}
+#footer-navi {
+  writing-mode: vertical-rl;
+  -webkit-writing-mode: vertical-rl;
+  -moz-writing-mode: vertical-rl;
+  -ms-writing-mode: tb-rl;
+}
+#footer-navi .list {
+  padding-top: 0;
+}
+#footer-navi a {
+  color: #fff;
+}
+
+/* SP */
+@media screen and (max-width: 600px) {
+  .wrapper {
+    padding: 55px 20px 68px;
+  }
+  /* mainvisual */
+  #mainvisual .video {
+    width: 100%;
+    height: 100vh;
+    object-fit: cover;
+  }
+  /* point */
+  #point {
+    flex-direction: column;
+  }
+  #point .sec-title {
+    width: 100%;
+    margin-left: 0;
+    margin-bottom: 50px;
+    writing-mode: horizontal-tb;
+  }
+  #point .sec-title .ja {
+    margin-left: 0;
+  }
+  #point .textbox {
+    width: 100%;
+    writing-mode: horizontal-tb;
+  }
+  #point .textbox p {
+    margin-left: 0;
+    margin-bottom: 30px;
+  }
+  /* feature */
+  #feature .item {
+    flex-direction: column;
+    padding: 0 20px;
+  }
+  #feature .item .img {
+    width: 100%;
+  }
+  #feature .item .img img {
+    object-fit: cover;
+    height: 20vh;
+  }
+  #feature .item .text {
+    flex-direction: column;
+    width: 100%;
+    margin-bottom: 50px;
+  }
+  #feature .title {
+    writing-mode: horizontal-tb;
+  }
+  #feature .textbox {
+    writing-mode: horizontal-tb;
+  }
+  #feature .right-item .text {
+    padding: 0;
+  }
+  #feature .right-item .textbox {
+    padding: 0;
+  }
+  #feature .left-item .text{
+    flex-direction: column-reverse;
+  }
+  #feature .left-item .text {
+    padding: 0;
+  }
+  #feature .left-item .textbox {
+    padding: 0;
+  }
+  #feature .left-item {
+    flex-direction: column-reverse;
+  }
+  /* blog */
+  #blog {
+    flex-direction: column;
+  }
+  #blog .sec-title {
+    writing-mode: horizontal-tb;
+    margin-bottom: 30px;
+  }
+  #blog .list li {
+    width: 48%;
+  }
+  /* footer */
+  #footer {
+    padding-bottom: 10px 20px;
+  }
+  #footer .wrapper {
+    padding: 0;
+  }
+  #footer .container {
+    flex-direction: column;
+  }
+  #footer .title {
+    writing-mode: horizontal-tb;
+    margin-bottom: 50px;
+  }
+  #footer .sns {
+    writing-mode: horizontal-tb;
+    margin-bottom: 20px;
+  }
+  #footer .copyright {
+    writing-mode: horizontal-tb;
+  }
+  #footer #footer-navi {
+    writing-mode: horizontal-tb;
+    margin-bottom: 40px;
+  }
+
+
+
+
+}
