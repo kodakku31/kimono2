@@ -23,275 +23,331 @@
   </head>
 
   <body>
-    <header id="header">
-      <h1 class="site-title">
-        <a href="#">|<img src="" alt="ロゴ画像">|</a>
+    <!-- ヘッダー -->
+    <header class="header">
+      <h1 class="header_logo">
+        <a href="/">
+          <img src="" alt="和~なご">
+        </a>
       </h1>
 
-      <nav id="navi">
-        <div class="wrapper">
-          <ul class="menu-right font_kosakigake">
-            <li><a href="#">テキスト<span class="en">text</span></a></li>
-            <li><a href="#">テキスト<span class="en">text</span></a></li>
-            <li><a href="#">テキスト<span class="en">text</span></a></li>
-            <li><a href="#">テキスト<span class="en">text</span></a></li>
-            <li><a href="#">テキスト<span class="en">text</span></a></li>
-          </ul>
+      <button class="gNavBtn">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
 
-          <div class="menu-left">
-            <div class="sns">
-              <a href="https://www.instagram.com" target="_blank">
-                <img src="../img/icon_instagram.svg" alt="インスタ画像">
-              </a>
-              <a href="https://www.facebook.com" target="_blank">
-                <img src="../img/icon_facebook.svg" alt="フェイスブック画像">
-              </a>
+      <nav class="gNav">
+        <div class="gNav_container vertical wrapper">
+          <ul class="gNav_primary font_kosakigake">
+            <li class="footer_nav_ttl"><a href="/">本格着付け 和~なごみ~</a></li>
+            <li><a href="about.html">『和~なごみ~』について<span>About us</span></a></li>
+            <li><a href="works.html">実例紹介<span>Works</span></a></li>
+            <li><a href="cost.html">費用と流れ<span>Cost and Flow</span></a></li>
+            <li><a href="blog.html">ブログ<span>Blog</span></a></li>
+            <li><a href="recruit.html">採用情報<span>Recruit</span></a></li>
+            <li><a href="contact.html">お問い合わせ<span>Contact</span></a></li>
+          </ul>
+          <div class="gNav_secondary">
+            <div class="gNav_sns">
+              <a href="https://www.instagram.com/juhmokusha/" target="_blank" rel="noopener"><img src="../img/icon_instagram.svg" alt="instagramアイコン"></a>
+              <a href="https://www.facebook.com/juhmokusha/" target="_blank" rel="noopener"><img src="../img/icon_facebook.svg" alt="facebookアイコン"></a>
             </div>
-            <p class="copyright">&copy; text text text</p>
+            <div>
+              <small class="gNav_copyright"><span>&copy;</span> 2021 Juhmokusha</small>
+              <a class="gNav_privacy" href="/privacy/">Privacy Policy</a>
+            </div>
           </div>
         </div>
       </nav>
-
-      <div class="hamburger">
-        <span></span>
-        <span></span>
-        <span></span>
-      </div>
-
     </header>
 
+    <!-- メイン -->
     <main>
       <!-- mainvisual -->
-      <div id="mainvisual">
-        <video class="video" src="../video/video2.mp4" playsinline loop autoplay mute></video>
+      <div class="homeMv lyMv">
+        <div class="homeMv_textBox wrapper">
+          <p class="font_kosakigake">木の香りや<br>手触りの良さを<br>大切にした暮らし</p>
+          <p class="font_garamond">Living with <br>the smell <br>and feel of wood</p>
+        </div>
+        <video class="homeMv_video" src="../video/video2.mp4" playsinline loop autoplay muted></video>
       </div>
 
       <!-- point -->
-      <section id="point" class="wrapper">
-        <h2 class="sec-title font_kosakigake">
-          <span class="ja">
-            和の美を紡ぐ<br>
-            着物の教室
-          </span>
-          <span class="en font_garamond">
-            Kimono Class<br>
-            Weaving Japanese Beauty
-          </span>
-        </h2>
-
-        <div class="textbox">
-          古典と現代の着物文化を体験できる、<br>
-          アットホームな着物の教室です。<br>
-          着付けやコーディネートも学びながら、<br>
-          和の美意識を磨きましょう。<br>
-          皆様との絆を大切に、<br>
-          日本の美を広めるお手伝いを<br>
-          させていただきますます。
-        </div>
-      </section>
-
-      <div id="img1-bg" class="fixed-bg"></div>
-
-      <section id="feature">
-        <div class="item right-item">
-          <div class="text">
-            <h2 class="title">
-              <span class="ja font_kosakigake">専門的な指導</span>
-              <span class="en font_garamond">House made fo wood</span>
+      <section id="point">
+        <div class="pointBox wrapper vertical">
+          <div class="ttlBox">
+            <h2 class="ja font_kosakigake">
+              和の美を紡ぐ<br>
+              着物の教室
             </h2>
-            <div class="textbox">
-              <p>
-                木は家に姿を買えた後も呼吸し、<br>
-                住む人とともに生き続けています。<br>
-                それははるか昔から、<br>
-                人間の最も身近にある自然素材と言えるでしょう。
-              </p>
-              <p>
-                その特性を十分に活かすのは、<br>
-                育った森の環境に近い場所とされています。<br>
-                我々が主に使用するのは、国産の杉や松。
-              </p>
-              <p>
-                構造や内装、建具などの細かい部分に至るまで、<br>
-                全ての日本産の無垢素材で仕上げます。
-              </p>
-            </div>
+            <p class="en font_garamond">
+              Kimono Class<br>
+              Weaving Japanese Beauty
+            </p>
           </div>
-          <div class="img">
-            <img src="../img/cont01.jpg" alt="特徴画像１">
-          </div>
-        </div>
 
-        <div class="item left-item">
-          <div class="img">
-            <img src="../img/cont02.jpg" alt="特徴画像１">
-          </div>
-          <div class="text">
-            <div class="textbox">
-              <p>
-                家全体から感じられる<br>
-                温もりや木の手触りは、<br>
-                素材の良さだけでなく、<br>
-                それを活かす大工や<br>
-                左官職人の確かな技術と<br>
-                丁寧な手仕事によるものです。
-              </p>
-              <p>
-                我々ではお施主様の思いを形にするために、<br>
-                作り手の顔が見えることを大切にし、<br>
-                お引越し後もその関係は続いていきます。
-              </p>
-            </div>
-            <h2 class="title">
-              <span class="ja font_kosakigake">個別指導</span>
-              <span class="en font_garamond">Craftsman-built house</span>
-            </h2>
-          </div>
-        </div>
+          <div class="textBox">
+            <p>
+              古典と現代の着物文化を体験できる、<br>
+              アットホームな着物の教室です。<br>
+              着付けやコーディネートも学びながら、<br>
+              和の美意識を磨きましょう。<br>
+              皆様との絆を大切に、<br>
+              日本の美を広めるお手伝いを<br>
+              させていただきますます。
+            </p>
 
-        <div class="item right-item">
-          <div class="text">
-            <h2 class="title">
-              <span class="ja font_kosakigake">豊富なコース</span>
-              <span class="en font_garamond">Flexble design capability</span>
-            </h2>
-            <div class="textbox">
-              <p>
-                お客様の暮らし方やご要望に合わせて、<br>
-                無垢と自然素材の持ち味をいかした<br>
-                居心地の良い住まいをご提案痛いします。
-              </p>
-              <p>
-                我々では街並みとの調和や<br>
-                庭とのつながりも重視しながら、<br>
-                どんなに厳しい条件でも光と風、<br>
-                木の温もりが感じられる設計を心がけています。
-              </p>
-            </div>
-          </div>
-          <div class="img">
-            <img src="../img/cont03.jpg" alt="特徴画像１">
+            <p>
+              古典と現代の着物文化を体験できる、<br>
+              アットホームな着物の教室です。<br>
+              着付けやコーディネートも学びながら、<br>
+              和の美意識を磨きましょう。<br>
+              皆様との絆を大切に、<br>
+              日本の美を広めるお手伝いを<br>
+              させていただきますます。
+            </p>
           </div>
         </div>
       </section>
 
+      <!-- 背景 -->
+      <div id="img1-bg"></div>
 
+      <!-- 特徴 -->
+      <div id="feature">
+        <section class="feature_sec">
+          <a href="#">
+            <div class="feature_sec_inner">
+              <figure class="feature_image">
+                <picture>
+                  <source media="(max-width:767px)" srcset="">
+                  <img src="../img/cont01.jpg" alt="">
+                </picture>
+              </figure>
+              <div class="feature_contBox">
+                <h2 class="secTtl vertical">
+                  専門的な指導
+                  <span>House made fo wood</span>
+                </h2>
+                <div class="feature_textBox vertical">
+                  木は家に姿を買えた後も呼吸し、<br>
+                  住む人とともに生き続けています。<br>
+                  それははるか昔から、<br>
+                  人間の最も身近にある自然素材と言えるでしょう。<br><br>
+                  その特性を十分に活かすのは、<br>
+                  育った森の環境に近い場所とされています。<br>
+                  我々が主に使用するのは、国産の杉や松。<br><br>
+                  構造や内装、建具などの細かい部分に至るまで、<br>
+                  全ての日本産の無垢素材で仕上げます。
+                </div>
+              </div>
+            </div>
+          </a>
+        </section>
+
+        <section class="feature_sec">
+          <a href="#">
+            <div class="feature_sec_inner">
+              <figure class="feature_image">
+                <picture>
+                  <source media="(max-width:767px)" srcset="">
+                  <img src="../img/cont02.jpg" alt="">
+                </picture>
+              </figure>
+              <div class="feature_contBox">
+                <h2 class="secTtl vertical">
+                  個別指導
+                  <span>Craftsman-built house</span>
+                </h2>
+                <div class="feature_textBox vertical">
+                  家全体から感じられる<br>
+                  温もりや木の手触りは、<br>
+                  素材の良さだけでなく、<br>
+                  それを活かす大工や<br>
+                  左官職人の確かな技術と<br>
+                  丁寧な手仕事によるものです。<br><br>
+                  我々ではお施主様の思いを形にするために、<br>
+                  作り手の顔が見えることを大切にし、<br>
+                  お引越し後もその関係は続いていきます。
+                </div>
+              </div>
+            </div>
+          </a>
+        </section>
+
+        <section class="feature_sec">
+          <a href="#">
+            <div class="feature_sec_inner">
+              <figure class="feature_image">
+                <picture>
+                  <source media="(max-width:767px)" srcset="">
+                  <img src="../img/cont03.jpg" alt="">
+                </picture>
+              </figure>
+              <div class="feature_contBox">
+                <h2 class="secTtl vertical">
+                  豊富なコース
+                  <span>Flexble design capability</span>
+                </h2>
+                <div class="feature_textBox vertical">
+                  お客様の暮らし方やご要望に合わせて、<br>
+                  無垢と自然素材の持ち味をいかした<br>
+                  居心地の良い住まいをご提案痛いします。<br><br>
+                  我々では街並みとの調和や<br>
+                  庭とのつながりも重視しながら、<br>
+                  どんなに厳しい条件でも光と風、<br>
+                  木の温もりが感じられる設計を心がけています。
+                </div>
+              </div>
+            </div>
+          </a>
+        </section>
+
+      </div>
+
+      <!-- 背景 -->
       <div id="img2-bg" class="fixed-bg"></div>
 
-      <section id="blog" class="wrapper">
-        <h2 class="sec-title">
-          <span class="ja">ブログ</span>
-          <span class="en">Blog</span>
-        </h2>
-        <ul class="list">
+      <!-- 実例紹介 -->
+      <section id="works" class="wrapper">
+        <h2 class="works_ttl secTtl vertical">実例紹介<span>Works</span></h2>
+        <ul class="works_list">
           <li>
-            <a href="#">
-              <div class="img">
-                <img src="../img/blog1.jpg" alt="">
-              </div>
-              <p class="font_kosakigake">テキストテキスト</p>
-              <time class="font_garamond">XXXX.XX.XX</time>
+            <a href="">
+              <figure>
+                <img src="../img/works1.jpg" alt="">
+              </figure>
+              <p class="works_contTtl font_kosakigake">嵯峨の家</p>
+              <p class="works_day font_garamond">2022年10月</p>
             </a>
           </li>
+
           <li>
-            <a href="#">
-              <div class="img">
-                <img src="../img/blog2.jpg" alt="">
-              </div>
-              <p class="font_kosakigake">テキストテキスト</p>
-              <time class="font_garamond">XXXX.XX.XX</time>
+            <a href="">
+              <figure>
+                <img src="../img/works1.jpg" alt="">
+              </figure>
+              <p class="works_contTtl font_kosakigake">嵯峨の家</p>
+              <p class="works_day font_garamond">2022年10月</p>
             </a>
           </li>
+
           <li>
-            <a href="#">
-              <div class="img">
-                <img src="../img/blog3.jpg" alt="">
-              </div>
-              <p class="font_kosakigake">テキストテキスト</p>
-              <time class="font_garamond">XXXX.XX.XX</time>
+            <a href="">
+              <figure>
+                <img src="../img/works1.jpg" alt="">
+              </figure>
+              <p class="works_contTtl font_kosakigake">嵯峨の家</p>
+              <p class="works_day font_garamond">2022年10月</p>
             </a>
           </li>
+
           <li>
-            <a href="#">
-              <div class="img">
-                <img src="../img/blog4.jpg" alt="">
-              </div>
-              <p class="font_kosakigake">テキストテキスト</p>
-              <time>XXXX.XX.XX</time>
-            </a>
-          </li>
-          <li>
-            <a href="#">
-              <div class="img">
-                <img src="../img/blog5.jpeg" alt="">
-              </div>
-              <p class="font_kosakigake">テキストテキスト</p>
-              <time>XXXX.XX.XX</time>
-            </a>
-          </li>
-          <li>
-            <a href="#">
-              <div class="img">
-                <img src="../img/blog6.jpeg" alt="">
-              </div>
-              <p class="font_kosakigake">テキストテキスト</p>
-              <time>XXXX.XX.XX</time>
+            <a href="">
+              <figure>
+                <img src="../img/works1.jpg" alt="">
+              </figure>
+              <p class="works_contTtl font_kosakigake">嵯峨の家</p>
+              <p class="works_day font_garamond">2022年10月</p>
             </a>
           </li>
         </ul>
+
+        <p class="viewBtn"><a href="/works/">View All</a></p>
       </section>
+
+      <!-- ブログ -->
+      <section id="blog" class="wrapper">
+        <h2 class="blog_ttl secTtl vertical">ブログ<span>Blog</span></h2>
+        <ul class="blog_list">
+          <li>
+            <a href="">
+              <figure>
+                <img src="../img/blog6.jpg" alt="">
+              </figure>
+              <p class="blog_contTtl font_kosakigake">梅小路の家　完成見学会のご案内</p>
+              <time class="blog_day font_garamond">2023.05.01</time>
+            </a>
+          </li>
+          <li>
+            <a href="">
+              <figure>
+                <img src="../img/blog2.jpg" alt="">
+              </figure>
+              <p class="blog_contTtl font_kosakigake">梅小路の家　完成見学会のご案内</p>
+              <time class="blog_day font_garamond">2023.05.01</time>
+            </a>
+          </li>
+          <li>
+            <a href="">
+              <figure>
+                <img src="../img/blog3.jpg" alt="">
+              </figure>
+              <p class="blog_contTtl font_kosakigake">梅小路の家　完成見学会のご案内</p>
+              <time class="blog_day font_garamond">2023.05.01</time>
+            </a>
+          </li>
+          <li>
+            <a href="">
+              <figure>
+                <img src="../img/blog4.jpg" alt="">
+              </figure>
+              <p class="blog_contTtl font_kosakigake">梅小路の家　完成見学会のご案内</p>
+              <time class="blog_day font_garamond">2023.05.01</time>
+            </a>
+          </li>
+          <li>
+            <a href="">
+              <figure>
+                <img src="../img/blog5.jpg" alt="">
+              </figure>
+              <p class="blog_contTtl font_kosakigake">梅小路の家　完成見学会のご案内</p>
+              <time class="blog_day font_garamond">2023.05.01</time>
+            </a>
+          </li>
+          <li>
+            <a href="">
+              <figure>
+                <img src="../img/blog6.jpg" alt="">
+              </figure>
+              <p class="blog_contTtl font_kosakigake">梅小路の家　完成見学会のご案内</p>
+              <time class="blog_day font_garamond">2023.05.01</time>
+            </a>
+          </li>
+
+        </ul>
+        <p class="viewBtn"><a href="/blog/">View All</a></p>
+      </section>
+
+
+
     </main>
 
+    <!-- フッター -->
     <footer id="footer">
-      <div class="container font_kosakigake wrapper">
-        <h3 class="title">着付け</h3>
-
-        <nav id="footer-navi">
-          <ul class="list">
-            <li>
-              <a href="#">
-                テキストテキストテキスト
-                <span class="en">text text</span>
-              </a>
-            </li>
-            <li>
-              <a href="#">
-                テキストテキストテキスト
-                <span class="en">text text</span>
-              </a>
-            </li>
-            <li>
-              <a href="#">
-                テキストテキストテキスト
-                <span class="en">text text</span>
-              </a>
-            </li>
-            <li>
-              <a href="#">
-                テキストテキストテキスト
-                <span class="en">text text</span>
-              </a>
-            </li>
-            <li>
-              <a href="#">
-                テキストテキストテキスト
-                <span class="en">text text</span>
-              </a>
-            </li>
+      <div class="footer_container font_kosakigake wrapper vertical">
+        <nav class="footer_nav">
+          <ul>
+            <li class="footer_nav_ttl"><a href="/">本格着付け 和~なごみ~</a></li>
+            <li><a href="about.html">『和~なごみ~』について<span>About us</span></a></li>
+            <li><a href="works.html">実例紹介<span>Works</span></a></li>
+            <li><a href="cost.html">費用と流れ<span>Cost and Flow</span></a></li>
+            <li><a href="blog.html">ブログ<span>Blog</span></a></li>
+            <li><a href="recruit.html">採用情報<span>Recruit</span></a></li>
+            <li><a href="contact.html">お問い合わせ<span>Contact</span></a></li>
           </ul>
+          <div class="footer_sns">
+            <a href="https://www.instagram.com/juhmokusha/" target="_blank" rel="noopener"><img src="../img/icon_instagram.svg" alt="instagramアイコン"></a>
+            <a href="https://www.facebook.com/juhmokusha/" target="_blank" rel="noopener"><img src="../img/icon_facebook.svg" alt="facebookアイコン"></a>
+          </div>
         </nav>
-
-        <div class="sns">
-          <a href="https://www.instagram.com" target="_blank">
-            <img src="../img/icon_instagram.svg" alt="インスタ画像">
-          </a>
-          <a href="https://www.facebook.com" target="_blank">
-            <img src="../img/icon_facebook.svg" alt="フェイスブック画像">
-          </a>
+        <div>
+          <small class="footer_copyright"><span>&copy;</span> 2023 nagomi</small>
+          <a class="footer_privacy" href="/privacy/">Privacy Policy</a>
         </div>
-
-        <p class="copyright">&copy; text text text</p>
       </div>
     </footer>
+
   </body>
 </html>

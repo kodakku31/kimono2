@@ -4,7 +4,7 @@ $(function(){
   ハンバーガ―メニュー
   ===================================================*/
   // ハンバーガーメニューをクリックした時
-  $('.hamburger').on('click', function() {
+  $('.gNavBtn').on('click', function() {
     // ハンバーガーメニューの共通処理を呼び出す
     hamburger();
   });
@@ -24,13 +24,13 @@ $(function(){
 function hamburger() {
   // toggleClassを使用することで、hamburgerクラスにactiveクラスが存在する場合は削除、
   // 存在しない場合を追加する処理を自動で行ってくれる
-  $('.hamburger').toggleClass('active');
+  $('.gNavBtn').toggleClass('active');
 
-  if ($('.hamburger').hasClass('active')) {
+  if ($('.gNavBtn').hasClass('active')) {
     // hamburgerクラスにactiveクラスが存在する場合は、naviにもactiveクラスを追加する
-    $('#navi').addClass('active');
+    $('.gNav').addClass('active');
   } else {
     // hamburgerクラスにactiveクラスが存在しない場合は、naviからactiveクラスを削除する
-    $('#navi').removeClass('active');
+    $('.gNav').removeClass('active');
   }
 }
