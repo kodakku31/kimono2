@@ -1,3 +1,6 @@
+// 2024/8/29まで使用していたmain.js
+// footer.phpのjs部分をmain.jsに移行した
+
 $(function () {
   /*=================================================
   MENU
@@ -332,88 +335,4 @@ $(function () {
     });
     spSlider();
   }
-
-
-  /*=================================================
-  出張着付けのボタン（btn1, btn2）イベントハンドラ
-  ===================================================*/
-  const toggleHidden = (buttonSelector, textSelector) => {
-    const button = document.querySelector(buttonSelector);
-    if (button) {
-      button.addEventListener('click', () => {
-        const text = document.querySelector(textSelector);
-        if (text) {
-          text.classList.toggle('hidden');
-        }
-      });
-    }
-  };
-
-  toggleHidden('.btn1', '.btn1_text');
-  toggleHidden('.btn2', '.btn2_text');
-
-  /*=================================================
-  アコーディオンの開閉アニメーション
-  ===================================================*/
-  const ANIMATION_TIMES = { duration: 250, easing: 'ease-out' };
-
-  // jQueryのラップ内でDOM操作を実行する
-  const accordions = document.querySelectorAll('.accordion');
-
-  accordions.forEach(accordion => {
-    const title = accordion.querySelector('.accordion__title');
-    const content = accordion.querySelector('.accordion__content');
-    let animation = null;
-    let nowAnimation = '';
-
-    const resetAnimation = () => {
-      animation = null;
-      nowAnimation = '';
-      accordion.style.height = '';
-    };
-
-    title.addEventListener('click', e => {
-      e.preventDefault();
-      const accordionHeight = accordion.offsetHeight;
-      const titleHeight = title.offsetHeight;
-
-      if (animation) animation.cancel();
-
-      if (nowAnimation === 'closing' || !accordion.open) {
-        accordion.open = true;
-        nowAnimation = 'opening';
-        accordion.style.height = `${accordionHeight}px`;
-        const contentHeight = content.offsetHeight;
-
-        animation = accordion.animate(
-          { height: `${titleHeight + contentHeight}px` },
-          ANIMATION_TIMES
-        );
-
-        animation.onfinish = () => {
-          accordion.open = true;
-          resetAnimation();
-        };
-
-        accordion.classList.add('is-opened');
-      } else if (nowAnimation === 'opening' || accordion.open) {
-        nowAnimation = 'closing';
-        accordion.style.height = `${accordionHeight}px`;
-
-        animation = accordion.animate(
-          { height: `${titleHeight}px` },
-          ANIMATION_TIMES
-        );
-
-        animation.onfinish = () => {
-          accordion.open = false;
-          resetAnimation();
-        };
-
-        accordion.classList.remove('is-opened');
-      }
-    });
-  });
-
-  
 });
