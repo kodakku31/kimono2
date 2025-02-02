@@ -1546,12 +1546,14 @@ table tbody th {
   .homeClossLy_textBox {
     padding-top: 20px;
     padding-right: 0;
+    /* 
     display: -webkit-box;
     overflow: hidden;
     text-overflow: ellipsis;
     -webkit-line-clamp: 4;
     -webkit-box-orient: vertical;
-    word-break: break-all;
+    word-break: break-all; 
+    */
   }
   .homeClossLy_textBox.active {
     display: block;

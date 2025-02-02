@@ -319,9 +319,9 @@ $(function () {
         $(".homeWorks_slider").not(".slick-initialized").slick({
           infinite: false,
           prevArrow:
-            "<button class='homeWorks_slider_prev'><img src='/wp-content/themes/kimono/image/slide_arrows_prev.svg' alt=''></button>",
+            "<button class='homeWorks_slider_prev'><img src='/wp-content/themes/nagomi_2022/image/slide_arrows_prev.svg' alt=''></button>",
           nextArrow:
-            "<button class='homeWorks_slider_next'><img src='/wp-content/themes/kimono/image/slide_arrows_next.svg' alt=''></button>",
+            "<button class='homeWorks_slider_next'><img src='/wp-content/themes/nagomi_2022/image/slide_arrows_next.svg' alt=''></button>",
         });
       } else {
         $(".homeWorks_slider.slick-initialized").slick("unslick");
@@ -332,56 +332,56 @@ $(function () {
     });
     spSlider();
   }
-
-
+  
+  
   /*=================================================
   出張着付けのボタン（btn1, btn2）イベントハンドラ
   ===================================================*/
   const toggleHidden = (buttonSelector, textSelector) => {
     const button = document.querySelector(buttonSelector);
     if (button) {
-      button.addEventListener('click', () => {
+      button.addEventListener("click", () => {
         const text = document.querySelector(textSelector);
         if (text) {
-          text.classList.toggle('hidden');
+          text.classList.toggle("hidden");
         }
       });
     }
   };
 
-  toggleHidden('.btn1', '.btn1_text');
-  toggleHidden('.btn2', '.btn2_text');
+  toggleHidden(".btn1", ".btn1_text");
+  toggleHidden(".btn2", ".btn2_text");
 
   /*=================================================
   アコーディオンの開閉アニメーション
   ===================================================*/
-  const ANIMATION_TIMES = { duration: 250, easing: 'ease-out' };
+  const ANIMATION_TIMES = { duration: 250, easing: "ease-out" };
 
   // jQueryのラップ内でDOM操作を実行する
-  const accordions = document.querySelectorAll('.accordion');
+  const accordions = document.querySelectorAll(".accordion");
 
-  accordions.forEach(accordion => {
-    const title = accordion.querySelector('.accordion__title');
-    const content = accordion.querySelector('.accordion__content');
+  accordions.forEach((accordion) => {
+    const title = accordion.querySelector(".accordion__title");
+    const content = accordion.querySelector(".accordion__content");
     let animation = null;
-    let nowAnimation = '';
+    let nowAnimation = "";
 
     const resetAnimation = () => {
       animation = null;
-      nowAnimation = '';
-      accordion.style.height = '';
+      nowAnimation = "";
+      accordion.style.height = "";
     };
 
-    title.addEventListener('click', e => {
+    title.addEventListener("click", (e) => {
       e.preventDefault();
       const accordionHeight = accordion.offsetHeight;
       const titleHeight = title.offsetHeight;
 
       if (animation) animation.cancel();
 
-      if (nowAnimation === 'closing' || !accordion.open) {
+      if (nowAnimation === "closing" || !accordion.open) {
         accordion.open = true;
-        nowAnimation = 'opening';
+        nowAnimation = "opening";
         accordion.style.height = `${accordionHeight}px`;
         const contentHeight = content.offsetHeight;
 
@@ -395,9 +395,9 @@ $(function () {
           resetAnimation();
         };
 
-        accordion.classList.add('is-opened');
-      } else if (nowAnimation === 'opening' || accordion.open) {
-        nowAnimation = 'closing';
+        accordion.classList.add("is-opened");
+      } else if (nowAnimation === "opening" || accordion.open) {
+        nowAnimation = "closing";
         accordion.style.height = `${accordionHeight}px`;
 
         animation = accordion.animate(
@@ -410,10 +410,8 @@ $(function () {
           resetAnimation();
         };
 
-        accordion.classList.remove('is-opened');
+        accordion.classList.remove("is-opened");
       }
     });
   });
-
-  
 });
