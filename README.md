@@ -54,7 +54,7 @@
 ## 👨‍💻 開発者
 
 **山本鼓太郎 (Kotaro Yamamoto)**  
-- GitHub: [@kodakku31](https://github.com/kodakku31)
+- GitHub: [@kotarouuu31](https://github.com/kotarouuu31)を使っています
 - このプロジェクトをきっかけにプログラミングの世界に踏み出しました
 
 ---
