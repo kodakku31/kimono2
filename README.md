@@ -1,11 +1,11 @@
-# 和~なごみ~ - 着物出張着付け・教室ウェブサイト
+# 和なごみ - 着物出張着付け・教室ウェブサイト
 
 [![Website](https://img.shields.io/website-up-down-green-red/https/nagomi2022.com.svg)](https://nagomi2022.com/)
-[![WordPress](https://img.shields.io/badge/WordPress-Custom%20Theme-blue.svg)](https://wordpress.org/)
+
 
 ## 📋 プロジェクト概要
 
-母が始めた着物ビジネス「和~なごみ~」のために開発したWordPressカスタムテーマです。出張着付けサービスと着物教室の魅力を伝えるウェブサイトとして設計しました。
+母が始めた着物ビジネス「和なごみ」のために開発したWordPressカスタムテーマです。出張着付けサービスと着物教室の魅力を伝えるウェブサイトとして設計しました。
 
 **🌐 ライブサイト:** [https://nagomi2022.com/](https://nagomi2022.com/)
 
